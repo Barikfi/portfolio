@@ -1,0 +1,176 @@
+/* =============================================================
+   images.css — Ishan Das Portfolio
+   ─────────────────────────────────────────────────────────────
+   PURPOSE: All image / background-image references live here.
+   This makes it easy to swap photos without hunting through
+   the main stylesheet.
+
+   HOW TO USE:
+   1. Create a folder called "images/portfolio/" in the same
+      directory as index.html.
+   2. Add your design project images there.
+   3. Replace the placeholder gradient backgrounds below with:
+         background-image: url('images/portfolio/your-file.jpg');
+      and REMOVE the gradient lines for that card.
+
+   RECOMMENDED IMAGE SIZES:
+   • Portfolio cards  → 800×600 px (4:3 ratio), JPG/WebP
+   • Profile photo    → 600×600 px (1:1 ratio), JPG/WebP
+   • About photo      → 600×750 px (4:5 ratio), JPG/WebP
+   ============================================================= */
+
+
+/* ─────────────────────────────────────────────
+   PORTFOLIO CARD IMAGES
+   Each class maps to one .port-card in index.html.
+   Replace the gradient with a real image URL when ready.
+   ───────────────────────────────────────────── */
+
+/* CARD 1 — Event Promotion Poster
+   Swap placeholder gradient with your image:
+   background-image: url('images/portfolio/poster-event.jpg'); */
+.port-img-1 {
+  background-image: linear-gradient(
+    135deg,
+    #1a0533 0%,
+    #2d1b69 40%,
+    #0f3460 100%
+  );
+}
+
+/* CARD 2 — Sale Campaign Banner
+   Replace with: url('images/portfolio/banner-sale.jpg') */
+.port-img-2 {
+  background-image: linear-gradient(
+    135deg,
+    #0f2027 0%,
+    #203a43 50%,
+    #2c5364 100%
+  );
+}
+
+/* CARD 3 — Instagram Brand Kit
+   Replace with: url('images/portfolio/social-instagram.jpg') */
+.port-img-3 {
+  background-image: linear-gradient(
+    135deg,
+    #2d0050 0%,
+    #833ab4 50%,
+    #fd1d1d 100%
+  );
+}
+
+/* CARD 4 — Restaurant Opening Flyer
+   Replace with: url('images/portfolio/flyer-restaurant.jpg') */
+.port-img-4 {
+  background-image: linear-gradient(
+    135deg,
+    #0a3200 0%,
+    #1a5e1a 50%,
+    #f4a234 100%
+  );
+}
+
+/* CARD 5 — Motivational Quote Series
+   Replace with: url('images/portfolio/poster-quotes.jpg') */
+.port-img-5 {
+  background-image: linear-gradient(
+    135deg,
+    #1c1c2e 0%,
+    #16213e 50%,
+    #0f3460 100%
+  );
+}
+
+/* CARD 6 — Product Launch Graphics
+   Replace with: url('images/portfolio/social-launch.jpg') */
+.port-img-6 {
+  background-image: linear-gradient(
+    135deg,
+    #12002b 0%,
+    #4a0080 50%,
+    #0077b6 100%
+  );
+}
+
+
+/* ─────────────────────────────────────────────
+   ABOUT SECTION — image frame fallback
+   If images/about.jpg is missing, this gradient
+   fills the frame as a placeholder.
+   ───────────────────────────────────────────── */
+.about-img-frame {
+  /* Fallback visible only when image fails to load */
+  background-image: linear-gradient(
+    135deg,
+    #0f0f1a 0%,
+    #1a1040 60%,
+    #0a1628 100%
+  );
+}
+
+
+/* ─────────────────────────────────────────────
+   DECORATIVE PORTFOLIO CARD OVERLAYS
+   These add subtle design mock content on top
+   of the gradient backgrounds so cards don't
+   look completely blank before real images are added.
+   Uses CSS only — no extra HTML needed.
+   ───────────────────────────────────────────── */
+
+/* Shared overlay style */
+.port-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* Add a faint grid pattern to all placeholders */
+.port-img-1::after,
+.port-img-2::after,
+.port-img-3::after,
+.port-img-4::after,
+.port-img-5::after,
+.port-img-6::after {
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 39px,
+      rgba(255,255,255,0.03) 39px,
+      rgba(255,255,255,0.03) 40px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 39px,
+      rgba(255,255,255,0.03) 39px,
+      rgba(255,255,255,0.03) 40px
+    );
+}
+
+
+/* ─────────────────────────────────────────────
+   FILE STRUCTURE GUIDE
+   ─────────────────────────────────────────────
+   Keep your project files organised like this:
+
+   portfolio-ishan/
+   ├── index.html          ← main HTML
+   ├── style.css           ← all styles
+   ├── images.css          ← this file (image refs)
+   └── images/
+       ├── profile.jpg     ← hero avatar photo
+       ├── about.jpg       ← about section photo
+       └── portfolio/
+           ├── poster-event.jpg
+           ├── banner-sale.jpg
+           ├── social-instagram.jpg
+           ├── flyer-restaurant.jpg
+           ├── poster-quotes.jpg
+           └── social-launch.jpg
+
+   All images should be compressed (use TinyPNG or Squoosh)
+   to keep the site fast-loading.
+   ───────────────────────────────────────────── */
